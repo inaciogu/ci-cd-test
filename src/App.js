@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Esse app vai ser deployado utilizando CI/CD
         </a>
       </header>
     </div>

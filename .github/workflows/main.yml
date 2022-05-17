@@ -1,0 +1,24 @@
+name: "Deploy"
+
+on:
+  pull-request:
+    branches:
+      - "master"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Projects checkout
+        uses: actions/checkout@v3
+
+      - name: Dependencies Installation
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Libraries installation
+        run: npm install
+
+      - name: Building the project
+        run: npm run build

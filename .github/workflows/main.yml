@@ -22,3 +22,9 @@ jobs:
 
       - name: Building the project
         run: npm run build
+
+      - name: Deploy on netlify
+        uses: jsmrcaga/action-netlify-deploy@v1.1.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_DEPLOY_TO_PROD: true

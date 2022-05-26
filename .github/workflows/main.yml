@@ -18,10 +18,10 @@ jobs:
           node-version: 14
 
       - name: Libraries installation
-        run: npm install
+        run: yarn
 
       - name: Building the project
-        run: npm run build
+        run: yarn build
 
       - name: Deploy on netlify
         uses: jsmrcaga/action-netlify-deploy@v1.1.0
